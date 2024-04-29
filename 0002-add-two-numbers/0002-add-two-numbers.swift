@@ -18,6 +18,7 @@ class Solution {
         var sums = ListNode()
         var currNode: ListNode? = sums
         
+        // 1. 두 리스트 중 어느 하나가 nil이 될 때 까지 더해줌
         while left != nil && right != nil {
             let leftVal = left!.val
             let rightVal = right!.val
@@ -32,6 +33,7 @@ class Solution {
             currNode = nextNode
         }
         
+        // 2. 두 리스트 중 아직 nil이 아닌 것이 있으면 carry값 더해주면서 남은 숫자들 추가
         var remain = left ?? right
         
         while remain != nil {
@@ -44,25 +46,11 @@ class Solution {
             currNode = nextNode
         }
 
+        // 마지막 숫자까지 누적한 후 carry값이 남아있으면 그대로 추가
         if carry > 0 {
             currNode?.next = ListNode(carry)
         }
 
         return sums.next
-    }
-}
-
-extension Array where Element == Int {
-    
-    func toList() -> ListNode? {
-        
-        var list = ListNode()
-        
-        for i in (0..<self.count) {
-            let val = self[self.count-i]
-            
-        }
-        
-        return list
     }
 }
