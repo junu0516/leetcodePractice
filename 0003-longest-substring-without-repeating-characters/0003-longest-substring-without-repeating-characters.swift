@@ -3,10 +3,8 @@ class Solution {
         guard s.count >= 1  else {
             return 0
         }
-        
-        // 일단 편하게 싹 다 배열 처리
+
         let chars = Array(s)
-        
         var checkingSet: Set<Character> = []
         var maxLength = 0
         
