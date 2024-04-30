@@ -6,7 +6,6 @@ class Solution {
         var mid = (left + right) / 2
         
         while true {     
-            // print(mid)
             if nums[mid] == target {
                 return mid
             } else if nums[mid] < target {
@@ -19,7 +18,6 @@ class Solution {
             
             if left > right {
                 mid = left
-                // print("끝, left:\(left), right:\(right)")
                 break
             }
         }
