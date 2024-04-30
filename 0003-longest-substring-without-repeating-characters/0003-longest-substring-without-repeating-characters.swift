@@ -6,7 +6,6 @@ class Solution {
         
         // 일단 편하게 싹 다 배열 처리
         let chars = Array(s)
-        print(chars)
         
         var checkingSet: Set<Character> = []
         var maxLength = 0
@@ -37,8 +36,8 @@ class Solution {
                 }   
             }
             // a b c d b c k e f
-            print("currChar: \(currChar), \(checkingSet)")
-            print("-----------------------")
+            // print("currChar: \(currChar), \(checkingSet)")
+            // print("-----------------------")
         
             maxLength = max(maxLength, checkingSet.count)
             prevChar = currChar
