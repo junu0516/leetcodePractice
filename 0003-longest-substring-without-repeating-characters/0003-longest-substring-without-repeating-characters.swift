@@ -26,6 +26,7 @@ class Solution {
                     checkingSet = []
                     checkingSet.insert(currChar)
                     
+                    // 이전 문자들을 역순으로 탐색하면서 겹치지 않는 것들을 순차적으로 다시 넣어줌
                     var reverseCheckIndex = i-1
                     var reverseCheckChar = chars[reverseCheckIndex]
                     while reverseCheckChar != currChar && reverseCheckIndex >= 0 {
@@ -35,9 +36,6 @@ class Solution {
                     }
                 }   
             }
-            // a b c d b c k e f
-            // print("currChar: \(currChar), \(checkingSet)")
-            // print("-----------------------")
         
             maxLength = max(maxLength, checkingSet.count)
             prevChar = currChar
